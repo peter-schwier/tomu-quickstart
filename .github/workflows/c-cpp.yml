@@ -16,10 +16,10 @@ jobs:
     - name: apt-get install
       run: sudo apt-get install gcc-arm-none-eabi libnewlib-arm-none-eabi libstdc++-arm-none-eabi-newlib make dfu-util
     - name: make
-      run: cd usb-hid && make
+      run: cd peter && make
     - name: Archive dfu file
       uses: actions/upload-artifact@v4
       with:
-        name: usb-hid.dfu
-        path: usb-hid/usb-hid.dfu
+        name: dfu
+        path: peter/peter.dfu
         
